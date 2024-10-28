@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="437" height="139" border="1">
+    <tr>
+      <td s>s/no</td>
+      <td width="13">name</td>
+      <td width="13">place</td>
+      <td width="13">post</td>
+      <td width="13">district</td>
+      <td width="13">email</td>
+      <td width="13">phone</td>
+      <td width="13">photo</td>
+      <td width="13">type</td>
+      <td width="230">&nbsp;</td>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>&nbsp;{{ forloop.counter }}</td>
+      <td>&nbsp;{{ i.Name }}</td>
+      <td>&nbsp;{{ i.Phone }}</td>
+      <td>&nbsp;{{ i.Email }}</td>
+      <td>&nbsp;{{ i.Place }}<br>{{ i.Post }}<br>{{ i.pin }}<br>{{ i.District }}<br></td>
+      <td>&nbsp;{{ i.Photo }}</td>
+
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+</body>
+</html>
